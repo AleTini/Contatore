@@ -8,5 +8,5 @@ public class Contatore {
     public int getCount() {
         return count;
     }
-
 }
+
