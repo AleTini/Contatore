@@ -4,7 +4,12 @@ public class Contatore_Synchronized {
 
     public void increment() {
         synchronized (lock) {
-            count++;
+            int i = 0;
+            while(i < 5000){
+                i++;
+                count++;
+                System.out.println("Sono al count:" + count);
+            }
         }
     }
 
