@@ -3,13 +3,14 @@ public class Contatore_Synchronized {
     private int count = 0;
 
     public void increment() {
-        synchronized (lock) {
+
             int i = 0;
             while(i < 5000){
                 i++;
-                count++;
+                synchronized (lock) {
+                count++; }
                 System.out.println("Sono al count:" + count);
-            }
+
         }
     }
 
